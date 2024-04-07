@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 # Introduce an error by providing an incorrect file path
-df = pd.read_csv("data/train.csv")  # correct file path
+df = pd.read_csv("dataaa/train.csv")  # correct file path
 X = df.drop(columns=['Disease']).to_numpy()
 y = df['Disease'].to_numpy()
 labels = np.sort(np.unique(y))
