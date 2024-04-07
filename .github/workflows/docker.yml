@@ -23,4 +23,4 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: rajaj0110/rajaj01cicd
+        tags: rajaj0110/rajajccid
