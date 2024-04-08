@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 
-df = pd.read_csv("data/train.csv") 
+df = pd.read_csv("dataa/train.csv") 
 X = df.drop(columns=['Disease']).to_numpy()
 y = df['Disease'].to_numpy()
 labels = np.sort(np.unique(y))
