@@ -23,17 +23,17 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: UserName/reponame:trail
+          tags: rajaj01100/project:v1
   pull_doc_img:
     runs-on: ubuntu-latest  
     needs: build_push_i
     if: ${{ needs.build_push_i.result == 'success' }}
     steps:
       - name: Pull Docker image
-        run: docker pull UserName/repoName:VersionName
+        run: docker pull rajaj01100/project:v1
       - name: R_containeer
         run: |
-          OUTPUT=$(docker run UserName/repoName:VersionName)
+          OUTPUT=$(docker run rajaj01100/project:v1)
           echo "Score:"
           echo "$OUTPUT"
           if [[ `echo "$OUTPUT 0.30" | awk '{print ($1 < $2)}'` == 1 ]]; then echo "Insufficient Accuracy" && exit 1; fi
